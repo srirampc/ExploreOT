@@ -1,0 +1,150 @@
+---------------------------------------
+Begin Slurm Prolog: Jun-06-2023 09:05:58
+Job ID:    2368667
+User ID:   klapborisuth3
+Account:   gts-saluru8-coda20
+Job name:  sampled_gromov_e_constant_gaussian_graph_500_1_loss_1000_1000
+Partition: cpu-medium
+QOS:       inferno
+---------------------------------------
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1000, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=500, n_samples_t=500, name_algo='sampled_gromov_e_constant', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1000', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Mean Wasserstein distance 0.6955401156441857
+Mean Wasserstein distance approximated 0.6952633719020789
+Mean computational time for finding T 945.8833033561707
+Mean computational time for the approximated Wasserstein distance 0.09940271377563477
+Mean computational time for the real Wasserstein distance 401.8794722795486
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1000, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=500, n_samples_t=500, name_algo='sampled_gromov_e_constant', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1000', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Mean Wasserstein distance 0.6955401156441857
+Mean Wasserstein distance approximated 0.6952633719020789
+Mean computational time for finding T 945.939042854309
+Mean computational time for the approximated Wasserstein distance 0.10101640224456787
+Mean computational time for the real Wasserstein distance 407.9862339258194
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1000, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=500, n_samples_t=500, name_algo='sampled_gromov_e_constant', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1000', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Mean Wasserstein distance 0.6955401156441857
+Mean Wasserstein distance approximated 0.6952633719020789
+Mean computational time for finding T 948.9715958356858
+Mean computational time for the approximated Wasserstein distance 0.09868459701538086
+Mean computational time for the real Wasserstein distance 410.99218299388883
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1000, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=500, n_samples_t=500, name_algo='sampled_gromov_e_constant', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1000', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Mean Wasserstein distance 0.6955401156441857
+Mean Wasserstein distance approximated 0.6952633719020789
+Mean computational time for finding T 974.9983075141906
+Mean computational time for the approximated Wasserstein distance 0.11041123867034912
+Mean computational time for the real Wasserstein distance 407.2320069313049
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1000, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=500, n_samples_t=500, name_algo='sampled_gromov_e_constant', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1000', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Mean Wasserstein distance 0.6955401156441857
+Mean Wasserstein distance approximated 0.6952633719020789
+Mean computational time for finding T 1277.7843389749528
+Mean computational time for the approximated Wasserstein distance 0.10514583587646484
+Mean computational time for the real Wasserstein distance 677.086441540718
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1000, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=500, n_samples_t=500, name_algo='sampled_gromov_e_constant', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1000', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Mean Wasserstein distance 0.6955401156441857
+Mean Wasserstein distance approximated 0.6952633719020789
+Mean computational time for finding T 1280.0256484270096
+Mean computational time for the approximated Wasserstein distance 0.10452518463134766
+Mean computational time for the real Wasserstein distance 681.1642135858535
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1000, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=500, n_samples_t=500, name_algo='sampled_gromov_e_constant', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1000', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Mean Wasserstein distance 0.6955401156441857
+Mean Wasserstein distance approximated 0.6952633719020789
+Mean computational time for finding T 1293.276702284813
+Mean computational time for the approximated Wasserstein distance 0.10645606517791747
+Mean computational time for the real Wasserstein distance 679.0003616809845
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1000, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=500, n_samples_t=500, name_algo='sampled_gromov_e_constant', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1000', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Warning catched: Return last stable T
+Mean Wasserstein distance 0.6955401156441857
+Mean Wasserstein distance approximated 0.6952633719020789
+Mean computational time for finding T 1292.2555448770522
+Mean computational time for the approximated Wasserstein distance 0.10733551979064941
+Mean computational time for the real Wasserstein distance 681.72463555336
+---------------------------------------
+Begin Slurm Epilog: Jun-06-2023 14:35:08
+Job ID:        2368667
+Array Job ID:  _4294967294
+User ID:       klapborisuth3
+Account:       gts-saluru8-coda20
+Job name:      sampled_gromov_e_constant_gaussian_graph_500_1_loss_1000_1000
+Resources:     cpu=8,mem=128G,node=1
+Rsrc Used:     cput=1-19:53:28,vmem=10152K,walltime=05:29:11,mem=8540K,energy_used=0
+Partition:     cpu-medium
+QOS:           inferno
+Nodes:         atl1-1-02-002-20-2
+---------------------------------------

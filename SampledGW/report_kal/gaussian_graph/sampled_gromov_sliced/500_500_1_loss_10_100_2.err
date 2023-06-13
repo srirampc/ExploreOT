@@ -1,0 +1,3 @@
+slurmstepd: error: *** JOB 2368258 ON atl1-1-01-005-27-1 CANCELLED AT 2023-06-06T09:02:00 ***
+slurmstepd: error: *** STEP 2368258.0 ON atl1-1-01-005-27-1 CANCELLED AT 2023-06-06T09:02:00 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

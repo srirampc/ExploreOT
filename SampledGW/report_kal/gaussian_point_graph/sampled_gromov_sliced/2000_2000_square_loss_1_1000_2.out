@@ -1,0 +1,150 @@
+---------------------------------------
+Begin Slurm Prolog: Jun-06-2023 03:15:17
+Job ID:    2360741
+User ID:   klapborisuth3
+Account:   gts-saluru8-coda20
+Job name:  sampled_gromov_sliced_gaussian_point_graph_2000_square_loss_1_1000
+Partition: cpu-large
+QOS:       inferno
+---------------------------------------
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='square_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=2000, n_samples_t=2000, name_algo='sampled_gromov_sliced', name_dataset='gaussian_point_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Mean Wasserstein distance nan
+Mean Wasserstein distance approximated 85948.6533527896
+Mean computational time for finding T 26.641461300849915
+Mean computational time for the approximated Wasserstein distance 0.7125626802444458
+Mean computational time for the real Wasserstein distance nan
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='square_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=2000, n_samples_t=2000, name_algo='sampled_gromov_sliced', name_dataset='gaussian_point_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Mean Wasserstein distance nan
+Mean Wasserstein distance approximated 85948.6533527896
+Mean computational time for finding T 26.89331090450287
+Mean computational time for the approximated Wasserstein distance 0.7130367279052734
+Mean computational time for the real Wasserstein distance nan
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='square_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=2000, n_samples_t=2000, name_algo='sampled_gromov_sliced', name_dataset='gaussian_point_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Mean Wasserstein distance nan
+Mean Wasserstein distance approximated 85948.6533527896
+Mean computational time for finding T 27.00325083732605
+Mean computational time for the approximated Wasserstein distance 0.7165071487426757
+Mean computational time for the real Wasserstein distance nan
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='square_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=2000, n_samples_t=2000, name_algo='sampled_gromov_sliced', name_dataset='gaussian_point_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Mean Wasserstein distance nan
+Mean Wasserstein distance approximated 85948.6533527896
+Mean computational time for finding T 27.017174243927002
+Mean computational time for the approximated Wasserstein distance 0.7240414142608642
+Mean computational time for the real Wasserstein distance nan
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='square_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=2000, n_samples_t=2000, name_algo='sampled_gromov_sliced', name_dataset='gaussian_point_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Mean Wasserstein distance nan
+Mean Wasserstein distance approximated 85948.6533527896
+Mean computational time for finding T 27.044290208816527
+Mean computational time for the approximated Wasserstein distance 0.7253901481628418
+Mean computational time for the real Wasserstein distance nan
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='square_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=2000, n_samples_t=2000, name_algo='sampled_gromov_sliced', name_dataset='gaussian_point_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Mean Wasserstein distance nan
+Mean Wasserstein distance approximated 85948.6533527896
+Mean computational time for finding T 27.31713659763336
+Mean computational time for the approximated Wasserstein distance 0.7253450870513916
+Mean computational time for the real Wasserstein distance nan
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='square_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=2000, n_samples_t=2000, name_algo='sampled_gromov_sliced', name_dataset='gaussian_point_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Mean Wasserstein distance nan
+Mean Wasserstein distance approximated 85948.6533527896
+Mean computational time for finding T 27.328931856155396
+Mean computational time for the approximated Wasserstein distance 0.7258826732635498
+Mean computational time for the real Wasserstein distance nan
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=[[1, None], [1, None]], clique_size_s=200, clique_size_t=200, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=1.0, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='square_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=2000, n_samples_t=2000, name_algo='sampled_gromov_sliced', name_dataset='gaussian_point_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='1', param2='1000', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Point Gromov
+Mean Wasserstein distance nan
+Mean Wasserstein distance approximated 85948.6533527896
+Mean computational time for finding T 27.337391138076782
+Mean computational time for the approximated Wasserstein distance 0.7508897542953491
+Mean computational time for the real Wasserstein distance nan
+---------------------------------------
+Begin Slurm Epilog: Jun-06-2023 03:20:06
+Job ID:        2360741
+Array Job ID:  _4294967294
+User ID:       klapborisuth3
+Account:       gts-saluru8-coda20
+Job name:      sampled_gromov_sliced_gaussian_point_graph_2000_square_loss_1_1000
+Resources:     cpu=8,mem=512G,node=1
+Rsrc Used:     cput=00:38:40,vmem=10136K,walltime=00:04:50,mem=8524K,energy_used=0
+Partition:     cpu-large
+QOS:           inferno
+Nodes:         atl1-1-02-004-4-1
+---------------------------------------

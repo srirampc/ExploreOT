@@ -1,0 +1,22 @@
+---------------------------------------
+Begin Slurm Prolog: Jun-06-2023 16:32:33
+Job ID:    2374364
+User ID:   klapborisuth3
+Account:   gts-saluru8-coda20
+Job name:  sampled_gromov_e_constant_gaussian_graph_5000_square_loss_1000_100
+Partition: cpu-large
+QOS:       inferno
+---------------------------------------
+---------------------------------------
+Begin Slurm Epilog: Jun-07-2023 07:32:42
+Job ID:        2374364
+Array Job ID:  _4294967294
+User ID:       klapborisuth3
+Account:       gts-saluru8-coda20
+Job name:      sampled_gromov_e_constant_gaussian_graph_5000_square_loss_1000_100
+Resources:     cpu=8,mem=256G,node=1
+Rsrc Used:     cput=5-00:00:56,vmem=16156K,walltime=15:00:07,mem=14436K,energy_used=0
+Partition:     cpu-large
+QOS:           inferno
+Nodes:         atl1-1-01-005-29-2
+---------------------------------------

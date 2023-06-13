@@ -1,0 +1,70 @@
+---------------------------------------
+Begin Slurm Prolog: Jun-05-2023 15:29:44
+Job ID:    2359631
+User ID:   klapborisuth3
+Account:   gts-saluru8-coda20
+Job name:  e_gromov_gaussian_graph_100_1_loss_0.1
+Partition: cpu-small
+QOS:       inferno
+---------------------------------------
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=50, clique_size_t=50, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.1, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=100, n_samples_t=100, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.1', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Mean Wasserstein distance 0.8427196040381183
+Mean Wasserstein distance approximated 0.8427196040381183
+Mean computational time for finding T 46.1340980052948
+Mean computational time for the approximated Wasserstein distance 4.9614906311035155e-05
+Mean computational time for the real Wasserstein distance 0.41925487518310545
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=50, clique_size_t=50, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.1, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=100, n_samples_t=100, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.1', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Mean Wasserstein distance 0.8427196040381183
+Mean Wasserstein distance approximated 0.8427196040381183
+Mean computational time for finding T 46.64193658828735
+Mean computational time for the approximated Wasserstein distance 3.6954879760742188e-06
+Mean computational time for the real Wasserstein distance 0.41843338012695314
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=50, clique_size_t=50, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.1, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=100, n_samples_t=100, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.1', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Mean Wasserstein distance 0.8427196040381183
+Mean Wasserstein distance approximated 0.8427196040381183
+Mean computational time for finding T 46.79910385608673
+Mean computational time for the approximated Wasserstein distance 3.6001205444335937e-06
+Mean computational time for the real Wasserstein distance 0.4217097282409668
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=50, clique_size_t=50, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.1, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=100, n_samples_t=100, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.1', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Mean Wasserstein distance 0.8427196040381183
+Mean Wasserstein distance approximated 0.8427196040381183
+Mean computational time for finding T 46.920647048950194
+Mean computational time for the approximated Wasserstein distance 3.5524368286132813e-06
+Mean computational time for the real Wasserstein distance 0.4230036735534668
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=50, clique_size_t=50, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.1, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=100, n_samples_t=100, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.1', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Mean Wasserstein distance 0.8427196040381183
+Mean Wasserstein distance approximated 0.8427196040381183
+Mean computational time for finding T 46.94528043270111
+Mean computational time for the approximated Wasserstein distance 3.6478042602539064e-06
+Mean computational time for the real Wasserstein distance 0.42295997142791747
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=50, clique_size_t=50, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.1, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=100, n_samples_t=100, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.1', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Mean Wasserstein distance 0.8427196040381183
+Mean Wasserstein distance approximated 0.8427196040381183
+Mean computational time for finding T 47.10973851680755
+Mean computational time for the approximated Wasserstein distance 3.5762786865234375e-06
+Mean computational time for the real Wasserstein distance 0.4217550277709961
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=50, clique_size_t=50, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.1, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=100, n_samples_t=100, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.1', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Mean Wasserstein distance 0.8427196040381183
+Mean Wasserstein distance approximated 0.8427196040381183
+Mean computational time for finding T 47.23310012817383
+Mean computational time for the approximated Wasserstein distance 3.814697265625e-06
+Mean computational time for the real Wasserstein distance 0.42248196601867677
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=50, clique_size_t=50, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.1, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=100, n_samples_t=100, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.1', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+Mean Wasserstein distance 0.8427196040381183
+Mean Wasserstein distance approximated 0.8427196040381183
+Mean computational time for finding T 47.62907664775848
+Mean computational time for the approximated Wasserstein distance 4.291534423828125e-06
+Mean computational time for the real Wasserstein distance 0.45767717361450194
+---------------------------------------
+Begin Slurm Epilog: Jun-05-2023 15:39:30
+Job ID:        2359631
+Array Job ID:  _4294967294
+User ID:       klapborisuth3
+Account:       gts-saluru8-coda20
+Job name:      e_gromov_gaussian_graph_100_1_loss_0.1
+Resources:     cpu=8,mem=64G,node=1
+Rsrc Used:     cput=01:18:16,vmem=,walltime=00:09:47,mem=,energy_used=0
+Partition:     cpu-small
+QOS:           inferno
+Nodes:         atl1-1-02-008-8-2
+---------------------------------------

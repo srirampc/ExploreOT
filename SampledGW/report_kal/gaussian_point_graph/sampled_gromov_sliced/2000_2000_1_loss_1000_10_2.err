@@ -1,0 +1,129 @@
+Traceback (most recent call last):
+  File "main_comparaison.py", line 3617, in <module>
+    time_list_only_W, diff_to_identity = main(args)
+  File "main_comparaison.py", line 3044, in main
+    T, W_distance_list_approx[i], time_list_only_T[i], time_list_only_W_approx[i] = solve_G_OT(
+  File "main_comparaison.py", line 450, in solve_G_OT
+    T = Generalisation_OT(C1=C1,
+  File "/storage/home/hcoda1/1/klapborisuth3/Sampled-Gromov-Wasserstein/GROMOV_personal.py", line 659, in Generalisation_OT
+    new_T = emd(a=np.ones(T.shape[0]) / T.shape[0],
+  File "/storage/home/hcoda1/1/klapborisuth3/POT/POT-master/ot/lp/__init__.py", line 348, in emd
+    result_code_string = check_result(result_code)
+  File "ot/lp/emd_wrap.pyx", line 38, in ot.lp.emd_wrap.check_result
+UserWarning: numItermax reached before optimality. Try to increase numItermax.
+Traceback (most recent call last):
+  File "main_comparaison.py", line 3617, in <module>
+    time_list_only_W, diff_to_identity = main(args)
+  File "main_comparaison.py", line 3044, in main
+    T, W_distance_list_approx[i], time_list_only_T[i], time_list_only_W_approx[i] = solve_G_OT(
+  File "main_comparaison.py", line 450, in solve_G_OT
+    T = Generalisation_OT(C1=C1,
+  File "/storage/home/hcoda1/1/klapborisuth3/Sampled-Gromov-Wasserstein/GROMOV_personal.py", line 659, in Generalisation_OT
+    new_T = emd(a=np.ones(T.shape[0]) / T.shape[0],
+  File "/storage/home/hcoda1/1/klapborisuth3/POT/POT-master/ot/lp/__init__.py", line 348, in emd
+    result_code_string = check_result(result_code)
+  File "ot/lp/emd_wrap.pyx", line 38, in ot.lp.emd_wrap.check_result
+UserWarning: numItermax reached before optimality. Try to increase numItermax.
+Traceback (most recent call last):
+  File "main_comparaison.py", line 3617, in <module>
+    time_list_only_W, diff_to_identity = main(args)
+  File "main_comparaison.py", line 3044, in main
+    T, W_distance_list_approx[i], time_list_only_T[i], time_list_only_W_approx[i] = solve_G_OT(
+  File "main_comparaison.py", line 450, in solve_G_OT
+    T = Generalisation_OT(C1=C1,
+  File "/storage/home/hcoda1/1/klapborisuth3/Sampled-Gromov-Wasserstein/GROMOV_personal.py", line 659, in Generalisation_OT
+    new_T = emd(a=np.ones(T.shape[0]) / T.shape[0],
+  File "/storage/home/hcoda1/1/klapborisuth3/POT/POT-master/ot/lp/__init__.py", line 348, in emd
+    result_code_string = check_result(result_code)
+  File "ot/lp/emd_wrap.pyx", line 38, in ot.lp.emd_wrap.check_result
+UserWarning: numItermax reached before optimality. Try to increase numItermax.
+Traceback (most recent call last):
+  File "main_comparaison.py", line 3617, in <module>
+    time_list_only_W, diff_to_identity = main(args)
+  File "main_comparaison.py", line 3044, in main
+    T, W_distance_list_approx[i], time_list_only_T[i], time_list_only_W_approx[i] = solve_G_OT(
+  File "main_comparaison.py", line 450, in solve_G_OT
+    T = Generalisation_OT(C1=C1,
+  File "/storage/home/hcoda1/1/klapborisuth3/Sampled-Gromov-Wasserstein/GROMOV_personal.py", line 659, in Generalisation_OT
+    new_T = emd(a=np.ones(T.shape[0]) / T.shape[0],
+  File "/storage/home/hcoda1/1/klapborisuth3/POT/POT-master/ot/lp/__init__.py", line 348, in emd
+    result_code_string = check_result(result_code)
+  File "ot/lp/emd_wrap.pyx", line 38, in ot.lp.emd_wrap.check_result
+UserWarning: numItermax reached before optimality. Try to increase numItermax.
+Traceback (most recent call last):
+  File "main_comparaison.py", line 3617, in <module>
+    time_list_only_W, diff_to_identity = main(args)
+  File "main_comparaison.py", line 3044, in main
+    T, W_distance_list_approx[i], time_list_only_T[i], time_list_only_W_approx[i] = solve_G_OT(
+  File "main_comparaison.py", line 450, in solve_G_OT
+    T = Generalisation_OT(C1=C1,
+  File "/storage/home/hcoda1/1/klapborisuth3/Sampled-Gromov-Wasserstein/GROMOV_personal.py", line 659, in Generalisation_OT
+    new_T = emd(a=np.ones(T.shape[0]) / T.shape[0],
+  File "/storage/home/hcoda1/1/klapborisuth3/POT/POT-master/ot/lp/__init__.py", line 348, in emd
+    result_code_string = check_result(result_code)
+  File "ot/lp/emd_wrap.pyx", line 38, in ot.lp.emd_wrap.check_result
+UserWarning: numItermax reached before optimality. Try to increase numItermax.
+Traceback (most recent call last):
+  File "main_comparaison.py", line 3617, in <module>
+    time_list_only_W, diff_to_identity = main(args)
+  File "main_comparaison.py", line 3044, in main
+    T, W_distance_list_approx[i], time_list_only_T[i], time_list_only_W_approx[i] = solve_G_OT(
+  File "main_comparaison.py", line 450, in solve_G_OT
+    T = Generalisation_OT(C1=C1,
+  File "/storage/home/hcoda1/1/klapborisuth3/Sampled-Gromov-Wasserstein/GROMOV_personal.py", line 659, in Generalisation_OT
+    new_T = emd(a=np.ones(T.shape[0]) / T.shape[0],
+  File "/storage/home/hcoda1/1/klapborisuth3/POT/POT-master/ot/lp/__init__.py", line 348, in emd
+    result_code_string = check_result(result_code)
+  File "ot/lp/emd_wrap.pyx", line 38, in ot.lp.emd_wrap.check_result
+UserWarning: numItermax reached before optimality. Try to increase numItermax.
+Traceback (most recent call last):
+  File "main_comparaison.py", line 3617, in <module>
+    time_list_only_W, diff_to_identity = main(args)
+  File "main_comparaison.py", line 3044, in main
+    T, W_distance_list_approx[i], time_list_only_T[i], time_list_only_W_approx[i] = solve_G_OT(
+  File "main_comparaison.py", line 450, in solve_G_OT
+    T = Generalisation_OT(C1=C1,
+  File "/storage/home/hcoda1/1/klapborisuth3/Sampled-Gromov-Wasserstein/GROMOV_personal.py", line 659, in Generalisation_OT
+    new_T = emd(a=np.ones(T.shape[0]) / T.shape[0],
+  File "/storage/home/hcoda1/1/klapborisuth3/POT/POT-master/ot/lp/__init__.py", line 348, in emd
+    result_code_string = check_result(result_code)
+  File "ot/lp/emd_wrap.pyx", line 38, in ot.lp.emd_wrap.check_result
+UserWarning: numItermax reached before optimality. Try to increase numItermax.
+Traceback (most recent call last):
+  File "main_comparaison.py", line 3617, in <module>
+    time_list_only_W, diff_to_identity = main(args)
+  File "main_comparaison.py", line 3044, in main
+    T, W_distance_list_approx[i], time_list_only_T[i], time_list_only_W_approx[i] = solve_G_OT(
+  File "main_comparaison.py", line 450, in solve_G_OT
+    T = Generalisation_OT(C1=C1,
+  File "/storage/home/hcoda1/1/klapborisuth3/Sampled-Gromov-Wasserstein/GROMOV_personal.py", line 659, in Generalisation_OT
+    new_T = emd(a=np.ones(T.shape[0]) / T.shape[0],
+  File "/storage/home/hcoda1/1/klapborisuth3/POT/POT-master/ot/lp/__init__.py", line 348, in emd
+    result_code_string = check_result(result_code)
+  File "ot/lp/emd_wrap.pyx", line 38, in ot.lp.emd_wrap.check_result
+UserWarning: numItermax reached before optimality. Try to increase numItermax.
+srun: error: atl1-1-02-003-22-1: tasks 0-7: Exited with exit code 1
+Command exited with non-zero status 1
+	Command being timed: "srun python3 main_comparaison.py -s --n_samples_s 2000 --loss_func_name 1_loss --name_dataset gaussian_point_graph --name_algo sampled_gromov_sliced --pickle_name 2 --batch_size 1000 --param1 1000 --iter_epsilon 10 --param2 10"
+	User time (seconds): 0.19
+	System time (seconds): 0.00
+	Percent of CPU this job got: 0%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 7:41.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9968
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2820
+	Voluntary context switches: 55
+	Involuntary context switches: 5
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

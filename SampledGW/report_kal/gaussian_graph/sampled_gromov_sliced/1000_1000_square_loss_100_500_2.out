@@ -1,0 +1,9 @@
+---------------------------------------
+Begin Slurm Prolog: Jun-06-2023 08:52:20
+Job ID:    2368032
+User ID:   klapborisuth3
+Account:   gts-saluru8-coda20
+Job name:  sampled_gromov_sliced_gaussian_graph_1000_square_loss_100_500
+Partition: cpu-medium
+QOS:       inferno
+---------------------------------------

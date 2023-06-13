@@ -1,0 +1,150 @@
+---------------------------------------
+Begin Slurm Prolog: Jun-05-2023 15:29:44
+Job ID:    2359648
+User ID:   klapborisuth3
+Account:   gts-saluru8-coda20
+Job name:  e_gromov_gaussian_graph_200_1_loss_0.01
+Partition: cpu-small
+QOS:       inferno
+---------------------------------------
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=100, clique_size_t=100, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.01, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=200, n_samples_t=200, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.01', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+Mean Wasserstein distance 0.7883389522531662
+Mean Wasserstein distance approximated 0.7883389522531662
+Mean computational time for finding T 69.68889327049256
+Mean computational time for the approximated Wasserstein distance 4.315376281738282e-06
+Mean computational time for the real Wasserstein distance 5.712515640258789
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=100, clique_size_t=100, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.01, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=200, n_samples_t=200, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.01', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+Mean Wasserstein distance 0.7883389522531662
+Mean Wasserstein distance approximated 0.7883389522531662
+Mean computational time for finding T 70.20417432785034
+Mean computational time for the approximated Wasserstein distance 3.0994415283203125e-06
+Mean computational time for the real Wasserstein distance 5.652580118179321
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=100, clique_size_t=100, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.01, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=200, n_samples_t=200, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.01', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+Mean Wasserstein distance 0.7883389522531662
+Mean Wasserstein distance approximated 0.7883389522531662
+Mean computational time for finding T 70.575310921669
+Mean computational time for the approximated Wasserstein distance 3.0994415283203125e-06
+Mean computational time for the real Wasserstein distance 5.673029589653015
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=100, clique_size_t=100, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.01, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=200, n_samples_t=200, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.01', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+Mean Wasserstein distance 0.7883389522531662
+Mean Wasserstein distance approximated 0.7883389522531662
+Mean computational time for finding T 70.57351443767547
+Mean computational time for the approximated Wasserstein distance 3.1948089599609376e-06
+Mean computational time for the real Wasserstein distance 5.690919733047485
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=100, clique_size_t=100, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.01, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=200, n_samples_t=200, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.01', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+Mean Wasserstein distance 0.7883389522531662
+Mean Wasserstein distance approximated 0.7883389522531662
+Mean computational time for finding T 70.94083395004273
+Mean computational time for the approximated Wasserstein distance 4.649162292480469e-06
+Mean computational time for the real Wasserstein distance 5.7063596725463865
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=100, clique_size_t=100, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.01, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=200, n_samples_t=200, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.01', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+Mean Wasserstein distance 0.7883389522531662
+Mean Wasserstein distance approximated 0.7883389522531662
+Mean computational time for finding T 71.12794771194459
+Mean computational time for the approximated Wasserstein distance 3.528594970703125e-06
+Mean computational time for the real Wasserstein distance 5.7146423816680905
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=100, clique_size_t=100, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.01, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=200, n_samples_t=200, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.01', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+Mean Wasserstein distance 0.7883389522531662
+Mean Wasserstein distance approximated 0.7883389522531662
+Mean computational time for finding T 71.2767858505249
+Mean computational time for the approximated Wasserstein distance 3.0755996704101563e-06
+Mean computational time for the real Wasserstein distance 5.731358909606934
+Namespace(KL=1, alpha_experiment=False, barycenter=False, batch_size=None, clique_size_s=100, clique_size_t=100, constraint=True, cross_val=False, dimension=2, dimension_s=20, dimension_t=10, enough_space=True, entropy_experiment=False, epsilon=0.01, epsilon_min=0.0, from_graphs='', iter_epsilon=1000, iter_max=1, learning_step=0.8, loss_func_name='1_loss', n_iter_algo=10, n_neighbors=5, n_samples_s=200, n_samples_t=200, name_algo='e_gromov', name_dataset='gaussian_graph', nb_iter_batch=1, nb_iter_update_Y=400, noise_graph=0.1, p_in_s=0.5, p_in_t=0.5, param1='0.01', param2='', pickle_name='2', pickle_path='pickle_compare', plot=False, ps_out_s=0.1, ps_out_t=0.1, rdm_seed=12345, repeat=True, same_space=False, save_pickle=True, sparse_graph=True, to_graphs='', value_graph=True, variance_s=5, variance_t=5, verbose=False)
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+The method as not converged. Return last stable T. Nb iter : 10
+Mean Wasserstein distance 0.7883389522531662
+Mean Wasserstein distance approximated 0.7883389522531662
+Mean computational time for finding T 71.74651710987091
+Mean computational time for the approximated Wasserstein distance 3.862380981445312e-06
+Mean computational time for the real Wasserstein distance 5.745232439041137
+---------------------------------------
+Begin Slurm Epilog: Jun-05-2023 15:44:25
+Job ID:        2359648
+Array Job ID:  _4294967294
+User ID:       klapborisuth3
+Account:       gts-saluru8-coda20
+Job name:      e_gromov_gaussian_graph_200_1_loss_0.01
+Resources:     cpu=8,mem=64G,node=1
+Rsrc Used:     cput=01:57:44,vmem=,walltime=00:14:43,mem=,energy_used=0
+Partition:     cpu-small
+QOS:           inferno
+Nodes:         atl1-1-02-008-18-1
+---------------------------------------

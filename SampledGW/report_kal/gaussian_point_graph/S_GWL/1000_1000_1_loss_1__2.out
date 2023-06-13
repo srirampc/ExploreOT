@@ -1,0 +1,22 @@
+---------------------------------------
+Begin Slurm Prolog: Jun-06-2023 16:12:10
+Job ID:    2374560
+User ID:   klapborisuth3
+Account:   gts-saluru8-coda20
+Job name:  S_GWL_gaussian_point_graph_1000_1_loss_1
+Partition: cpu-small
+QOS:       inferno
+---------------------------------------
+---------------------------------------
+Begin Slurm Epilog: Jun-06-2023 16:12:42
+Job ID:        2374560
+Array Job ID:  _4294967294
+User ID:       klapborisuth3
+Account:       gts-saluru8-coda20
+Job name:      S_GWL_gaussian_point_graph_1000_1_loss_1
+Resources:     cpu=8,mem=64G,node=1
+Rsrc Used:     cput=00:04:00,vmem=8784K,walltime=00:00:30,mem=7900K,energy_used=0
+Partition:     cpu-small
+QOS:           inferno
+Nodes:         atl1-1-02-012-31-1
+---------------------------------------
