@@ -8,6 +8,7 @@ matplotlib.rcParams['ps.fonttype'] = 42
 import pickle
 import pathlib
 import itertools
+import sys
 from os import path
 from abc import ABC, abstractmethod
 
@@ -51,7 +52,6 @@ def set_names_algo_args(kargs):
             kargs["names_algo_legend"].remove("SGW")
         except:
             pass
-
     if kargs["name_dataset"] in ["gaussian_graph", "gaussian_point_graph"]:
         try:
             kargs["names_algo"].remove("identity")
@@ -59,7 +59,6 @@ def set_names_algo_args(kargs):
         except:
             pass
     return kargs
-
 
 def set_paper_plot_args(kargs):
     if kargs["paper_plot"]:
@@ -71,14 +70,14 @@ def set_paper_plot_args(kargs):
             kargs["entropy"] = [0.01]
         elif kargs["name_dataset"] == "gaussian_point_graph":
             kargs["entropy"] = [0.005]
-
+        #
         if kargs["name_dataset"] == "same_graph":
             kargs["entropy_SGWL"] = [100]
         elif kargs["name_dataset"] == "gaussian_graph":
             kargs["entropy_SGWL"] = [1]
         elif kargs["name_dataset"] == "gaussian_point_graph":
             kargs["entropy_SGWL"] = [10]
-
+        #
         if kargs["name_dataset"] == "same_graph":
             kargs["best_param_m"] = 500
             kargs["best_param_b"] = 10
@@ -90,14 +89,11 @@ def set_paper_plot_args(kargs):
             kargs["best_param_b"] = 10
     return kargs
 
-
 def set_n_samples_args(kargs):
     kargs["n_samples_s"] = np.array(kargs["n_samples_s"])
-
     if not kargs["n_samples_t"]:
         kargs["n_samples_t"] = kargs["n_samples_s"]
     return kargs
-
 
 def load_pickle(path_pickle):
     try:
@@ -112,7 +108,7 @@ def load_and_verify_pickle(params, same_param,
         params[acces_dict] = None
         # print(path_pickle)
         # print("outer")
-        print("Pickle Path doesn't exist", path_pickle)
+        print("Pickle Path doesn't exist", path_pickle, file=sys.stderr)
         return params, same_param
     params[acces_dict] = load_pickle(path_pickle)
     if same_param is None:
@@ -132,7 +128,6 @@ def load_and_verify_pickle(params, same_param,
     # assert same_param[test] == params[acces_dict][test]
     return params, same_param
  
-
 
 class OPTMethodRun(ABC):
     def __init__(self, kargs, method, color, marker):
@@ -250,6 +245,7 @@ class OPTMethodRun(ABC):
              alpha=0.3,
              color=self.color)
 
+
 class EGromovRun(OPTMethodRun):
     def __init__(self, kargs, method = "e_gromov",
                  color = (0, 0.5, 0.8), marker = "o"):
@@ -266,10 +262,9 @@ class EGromovRun(OPTMethodRun):
                     noise=self.kargs["noise_graph"], e=fwx["e"],
                     name=self.kargs["pickle_name"])
         else:
-            return "{s}_{t}_{loss}_{noise}_{e}_{name}.pickle".format(
+            return "{s}_{t}_{loss}_{e}_{name}.pickle".format(
                     s=fwx["s"], t=fwx["t"], loss=self.kargs["loss_func_name"],
-                    noise=self.kargs["noise_graph"], e=fwx["e"],
-                    name=self.kargs["pickle_name"])
+                    e=fwx["e"], name=self.kargs["pickle_name"])
 
     def load_run_params(self, params, same_param, **dwx):
         for e in self.kargs["entropy"]:
@@ -303,12 +298,12 @@ class EGromovRun(OPTMethodRun):
 
     def plot_distances(self, params, same_param, method_legend):
         for e in self.kargs["entropy"]:
-            distance_F, _, mask = self.get_distances(params, same_param, e=e)
+            distance_W, _, mask = self.get_distances(params, same_param, e=e)
             if self.kargs["paper_plot"]:
                 legend_param = ""
             else:
                 legend_param = "$_{" + str(e) + "}$"
-            self.plt_fig_distances(distance_F, mask,
+            self.plt_fig_distances(distance_W, mask,
                                   method_legend, legend_param)
 
 
@@ -334,10 +329,9 @@ class SGWLRun(OPTMethodRun):
                     noise=self.kargs["noise_graph"], e=fwx["e"],
                     name=self.kargs["pickle_name"])
         else:
-            return "{s}_{t}_{loss}_{noise}_{e}_{name}.pickle".format(
+            return "{s}_{t}_{loss}_{e}_{name}.pickle".format(
                     s=fwx["s"], t=fwx["t"], loss=self.kargs["loss_func_name"],
-                    noise=self.kargs["noise_graph"], e=fwx["e"],
-                    name=self.kargs["pickle_name"])
+                    e=fwx["e"], name=self.kargs["pickle_name"])
 
     def load_run_params(self, params, same_param, **dwx):
         for e in self.kargs["entropy_SGWL"]:
@@ -372,12 +366,12 @@ class SGWLRun(OPTMethodRun):
 
     def plot_distances(self, params, same_param, method_legend):
         for e in self.kargs["entropy_SGWL"]:
-            distance_F, _, mask = self.get_distances(params, same_param, e=e)
+            distance_W, _, mask = self.get_distances(params, same_param, e=e)
             if self.kargs["paper_plot"]:
                 legend_param = ""
             else:
                 legend_param = "$_{" + str(e) + "}$"
-            self.plt_fig_distances(distance_F, mask,
+            self.plt_fig_distances(distance_W, mask,
                                    method_legend, legend_param)
 
 
@@ -402,8 +396,7 @@ class SampledGWRun(OPTMethodRun):
         else:
             return "{s}_{t}_{loss}_{b}_{m}{name}.pickle".format(
                     s=fwx["s"], t=fwx["t"], loss=self.kargs["loss_func_name"],
-                    noise=self.kargs["noise_graph"], b=fwx["b"], m = fwx["m"],
-                    name=self.kargs["pickle_name"])
+                    b=fwx["b"], m = fwx["m"], name=self.kargs["pickle_name"])
 
     def load_run_params(self, params, same_param, **dwx):
         for b, m in itertools.product(self.kargs["batchsize"],
@@ -464,12 +457,12 @@ class SampledGWRun(OPTMethodRun):
         iteration = self.kargs["iteration"]
         for (b_index, b), m  in itertools.product(enumerate(batchsize),
                                                   iteration):
-            distance_F, _,  mask = self.get_distances(params, same_param, b=b, m=m)
-            if distance_F is None:
+            distance_W, _,  mask = self.get_distances(params, same_param, b=b, m=m)
+            if distance_W is None:
                 continue
             if not self.kargs["paper_plot"]:
                 self.color = (1, b_index / len(batchsize), 0)
-            self.plt_fig_distances(distance_F, mask,
+            self.plt_fig_distances(distance_W, mask,
                                   method_legend, "")
 
 
@@ -478,7 +471,7 @@ class SampledGWEConstRun(SampledGWRun):
         super().__init__(kargs, method)
 
 
-class SampledGWSliced(SampledGWRun):
+class SampledGWSlicedRun(SampledGWRun):
     def __init__(self, kargs, method = "sampled_gromov_sliced"):
         super().__init__(kargs, method)
         if self.kargs["paper_plot"]:
@@ -492,21 +485,22 @@ class SampledGWNoKLEConstRun(SampledGWRun):
 
     def pickle_file_name(self, **fwx):
         if self.kargs["name_dataset"] == "same_graph":
-             "{s}_{t}_{loss}__{noise}_{b}_{m}_{name}.pickle".format(
+             return "{s}_{t}_{loss}__{noise}_{b}_{m}_{name}.pickle".format(
                 s=fwx["s"], t=fwx["t"], loss=self.kargs["loss_func_name"],
                 noise=self.kargs["noise_graph"], b=fwx["b"], m = fwx["m"],
                 name=self.kargs["pickle_name"])
         else:
-             "{s}_{t}_{loss}_{b}_{m}_3.pickle".format(
+             return "{s}_{t}_{loss}_{b}_{m}_3.pickle".format(
                 s=fwx["s"], t=fwx["t"], loss=self.kargs["loss_func_name"],
-                noise=self.kargs["noise_graph"], b=fwx["b"], m = fwx["m"])
+                b=fwx["b"], m = fwx["m"])
 
 
 class DefaultRun(OPTMethodRun):
     def __init__(self, kargs, method = "default", color = (0, 0.8, 0.5), #(0, 0, 1)
-                 marker = "+"):
+                 marker = "+", skipOne = False):
         super().__init__(kargs, method, color, marker)
         self.legend_SGW  = self.kargs["legend_SGW"]
+        self.skipOne = skipOne
 
     def param_key(self, **pwx):
         return "{method}{s}_{t}".format(method=self.method, s=pwx["s"],
@@ -540,7 +534,7 @@ class DefaultRun(OPTMethodRun):
     def plot_runtimes(self, params, same_param, method_legend):
         time_F, time_T, mask = self.get_runtimes(params, same_param)
         self.plt_fig_runtimes(time_F, time_T, mask,
-                              method_legend, "", True)
+                              method_legend, "", self.skipOne)
 
     def get_distances(self, params, same_param, **dwx):
         pkey_list = [self.param_key(s=nss, t=nst) for nss,nst in zip(
@@ -549,8 +543,8 @@ class DefaultRun(OPTMethodRun):
 
     def plot_distances(self, params, same_param, method_legend):
         linestyle = self.kargs["linestyle"]
-        distance_F, _,  mask = self.get_distances(params, same_param)
-        self.plt_fig_distances(distance_F, mask,
+        distance_W, _,  mask = self.get_distances(params, same_param)
+        self.plt_fig_distances(distance_W, mask,
                               method_legend, "")
         # here just to add Sliced GW in the legend. Kind of ugly...
         if "gaussian_graph" == self.kargs["name_dataset"] and self.kargs["paper_plot"] and self.legend_SGW:
@@ -565,14 +559,14 @@ class DefaultRun(OPTMethodRun):
 class UniformRun(DefaultRun):
     def __init__(self, kargs, method = "uniform",
                  color = (0.1, 0.5, 0.1), marker = "d"):
-        super().__init__(kargs, method, color, marker)
+        super().__init__(kargs, method, color, marker, True)
 
 
 class IdentityRun(DefaultRun):
     def __init__(self, kargs, method = "identity",
                 color = (0, 0.8, 0.5), #(0, 0, 1)
                 marker = "+"):
-        super().__init__(kargs, method, color, marker)
+        super().__init__(kargs, method, color, marker, True)
 
 
 class SlicedGWRun(DefaultRun):
@@ -581,28 +575,9 @@ class SlicedGWRun(DefaultRun):
         super().__init__(kargs, method, color, marker)
 
     def plot_distances(self, params, same_param, method_legend):
-        linestyle = self.kargs["linestyle"]
-        markersize = self.kargs["markersize"]
-        figsize = self.kargs["figsize"]
-        _, W_distance_list_approx, mask = self.get_distances(params, same_param)
-        plt.figure(2, figsize=figsize)
-        plt.plot(self.kargs["n_samples_s"][mask], 
-             np.mean(W_distance_list_approx, axis=1)[mask], 
-             linestyle=linestyle, label=method_legend,
-             color=self.color, marker=self.marker, markersize=markersize)
-        plt.fill_between(self.kargs["n_samples_s"][mask],
-            (np.mean(W_distance_list_approx, axis=1) - np.std(W_distance_list_approx, axis=1))[mask],
-            (np.mean(W_distance_list_approx, axis=1) + np.std(W_distance_list_approx, axis=1))[mask],
-            alpha=0.3, color=self.color)
-        W_distance_list_approx = W_distance_list_approx * 25
-        plt.plot(self.kargs["n_samples_s"][mask],
-             np.mean(W_distance_list_approx, axis=1)[mask], 
-             linestyle=linestyle, label="25" + method_legend,
-             color=self.color, marker=self.marker, markersize=markersize)
-        plt.fill_between(self.kargs["n_samples_s"][mask],
-            (np.mean(W_distance_list_approx, axis=1) - np.std(W_distance_list_approx, axis=1))[mask],
-            (np.mean(W_distance_list_approx, axis=1) + np.std(W_distance_list_approx, axis=1))[mask],
-            alpha=0.3, color=self.color)
+        _, distance_Wx, mask = self.get_distances(params, same_param)
+        self.plt_fig_distances(distance_Wx, mask, method_legend, "")
+        self.plt_fig_distances(distance_Wx*25, mask, "25"+method_legend, "")
 
 
 def analyse_data_hyper(**kargs):
@@ -616,8 +591,8 @@ def analyse_data_hyper(**kargs):
         "e_gromov_KL" : EGromovKLRun(kargs),
         "S_GWL" : SGWLRun(kargs),
         "sampled_gromov_e_constant": SampledGWEConstRun(kargs),
-        "sampled_gromov_sliced": SampledGWRun(kargs),
         "sampled_gromov_no_KL_e_constant": SampledGWNoKLEConstRun(kargs),
+        "sampled_gromov_sliced": SampledGWSlicedRun(kargs),
         "uniform": UniformRun(kargs),
         "identity": IdentityRun(kargs),
         "sliced_gromov": SlicedGWRun(kargs),
