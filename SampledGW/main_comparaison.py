@@ -16,17 +16,17 @@ from sklearn.model_selection import train_test_split, KFold
 import sklearn.svm
 import pandas as pd
 
-from GROMOV_personal import Generalisation_OT
-from GROMOV_personal import entropic_gromov_wasserstein
-from GROMOV_personal import compute_distance
-from GROMOV_personal import compute_L
-from GROMOV_personal import compute_distance_sparse
-import GROMOV_personal as Gromov
+from gwpl import Generalisation_OT
+from gwpl import entropic_gromov_wasserstein
+from gwpl import compute_distance
+from gwpl import compute_L
+from gwpl import compute_distance_sparse
+import gwpl as Gromov
 
 
-import S_GWL_Toolkit as GwGt
+import sgwl_toolkit as gwgt
 import ot
-from Sliced_GW import sgw_cpu
+from slicedgw import sgw_cpu
 
 
 def get_C(Xs, Xt, function=False, dimension=1, enough_space=True, square_root=True, GPU=False):
@@ -709,7 +709,7 @@ def solve_G_OT(name_algo, C1, C2, Xs, Xt, loss_func, args):
         for i in range(args.n_samples_t):
             idx2node_t[i] = i
 
-        pairs_idx, _, _ = GwGt.recursive_direct_graph_matching(
+        pairs_idx, _, _ = gwgt.recursive_direct_graph_matching(
             cost_s=C1, cost_t=C2,
             p_s=ot.unif(args.n_samples_s)[:, np.newaxis],
             p_t=ot.unif(args.n_samples_t)[:, np.newaxis],

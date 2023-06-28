@@ -15,16 +15,16 @@ from sklearn.model_selection import train_test_split, KFold
 import sklearn.svm
 import pandas as pd
 
-from GROMOV_personal import Generalisation_OT
-from GROMOV_personal import entropic_gromov_wasserstein
-from GROMOV_personal import compute_distance
-from GROMOV_personal import compute_distance_sparse
-import GROMOV_personal as Gromov
+from gwpl import Generalisation_OT
+from gwpl import entropic_gromov_wasserstein
+from gwpl import compute_distance
+from gwpl import compute_distance_sparse
+import gwpl as Gromov
 
 
-import S_GWL_Toolkit as GwGt
+import sgwl_toolkit as gwgt
 import ot
-from Sliced_GW import sgw_cpu
+from slicedgw import sgw_cpu
 
 
 def get_C(Xs, Xt, function=False, dimension=1, enough_space=True, square_root=True, GPU=False):
@@ -707,7 +707,7 @@ def solve_G_OT(name_algo, C1, C2, Xs, Xt, loss_func, args):
         for i in range(args.n_samples_t):
             idx2node_t[i] = i
 
-        pairs_idx, _, _ = GwGt.recursive_direct_graph_matching(
+        pairs_idx, _, _ = gwgt.recursive_direct_graph_matching(
             cost_s=C1, cost_t=C2,
             p_s=ot.unif(args.n_samples_s)[:, np.newaxis],
             p_t=ot.unif(args.n_samples_t)[:, np.newaxis],
@@ -752,264 +752,6 @@ def solve_G_OT(name_algo, C1, C2, Xs, Xt, loss_func, args):
 
     return T, W_distance, time_list_only_T, time_list_only_W_approx
 
-
-
-def analyse_data(name_dataset="gaussian",
-                 pickle_path="pickle_compare",
-                 names_algo=["sampled_gromov"],
-                 names_algo_legend=["sampled_gromov"],
-                 pickle_name="",
-                 n_samples_s=[50, 100, 200],
-                 n_samples_t=[],
-                 noise_graph=0.1,
-                 loss_func_name="1_loss",
-                 best_T_not_needed=True,
-                 log_scale=True,
-                 figsize=(10, 5),
-                 save=False):
-    n_samples_s = np.array(n_samples_s)
-    if name_dataset in ["gaussian_graph", "same_graph"]:
-        try:
-            names_algo.remove("sliced_gromov")
-            names_algo_legend.remove("Sliced GW")
-        except:
-            pass
-
-    if name_dataset in ["gaussian_graph", "gaussian_point_graph"]:
-        try:
-            names_algo.remove("identity")
-            names_algo_legend.remove("Identity")
-        except:
-            pass
-
-    if not n_samples_t:
-        n_samples_t = n_samples_s
-
-    params = {}
-
-    same_param = None
-
-    for name_algo in names_algo:
-        for i in range(len(n_samples_s)):
-            acces_dict = name_algo + str(n_samples_s[i]) + "_" + str(n_samples_t[i])
-
-            if name_dataset == "same_graph":
-                path_pickle = "./" + pickle_path + "/" + name_dataset + "/" + name_algo + "/" + str(n_samples_s[i]) + \
-                              "_" + str(n_samples_t[i]) + "_" + loss_func_name + "__" + str(noise_graph) + "_" + \
-                              pickle_name + ".pickle"
-            else:
-                path_pickle = "./" + pickle_path + "/" + name_dataset + "/" + name_algo + "/" + str(n_samples_s[i]) + \
-                              "_" + str(n_samples_t[i]) + "_" + loss_func_name + pickle_name + ".pickle"
-
-            if path.exists(path_pickle):
-                with open(path_pickle, "rb") as pickle_in:
-
-                    params[acces_dict] = pickle.load(pickle_in)
-                    if same_param is None:
-                        same_param = params[acces_dict]
-                    elif params[acces_dict]["name_algo"] != "uniform":
-                        # Use this to check if every run use the same parameter
-                        for test in ["n_iter_algo", "rdm_seed", "same_space"]:
-                            if same_param[test] != params[acces_dict][test]:
-                                print(params[acces_dict])
-                                pass
-                                print("Warning", test, same_param[test], params[acces_dict][test])
-                            # assert same_param[test] == params[acces_dict][test]
-            else:
-                # print("outer")
-                params[acces_dict] = None
-
-    assert same_param is not None  # Maybe an error in the pickle file name
-    for name_algo, name_algo_legend in zip(names_algo, names_algo_legend):
-        # print(name_algo, name_algo_legend)
-        time_list_only_W = np.zeros((len(n_samples_s), same_param["n_iter_algo"]))
-        time_list_only_T = np.zeros((len(n_samples_s), same_param["n_iter_algo"]))
-        time_list_only_W_approx = np.zeros((len(n_samples_s), same_param["n_iter_algo"]))
-        time_list = np.zeros((len(n_samples_s), same_param["n_iter_algo"]))
-        n_samples_s_temp = n_samples_s.copy()
-        mask = np.ones(len(n_samples_s), dtype=bool)
-        # n_samples_s_temp = n_samples_s_temp.astype(float)
-        for i in range(len(n_samples_s)):
-            acces_dict = name_algo + str(n_samples_s[i]) + "_" + str(n_samples_t[i])
-            # print(params[acces_dict])
-            if params[acces_dict] is None:
-                # n_samples_s_temp[i] = np.NaN
-                mask[i] = 0
-                continue
-            time_list_only_W_approx[i] = params[acces_dict]["time_list_only_W_approx"]
-            time_list_only_T[i] = params[acces_dict]["time_list_only_T"]
-            time_list_only_W[i] = params[acces_dict]["time_list_only_W"]
-            time_list[i] = time_list_only_T[i] + time_list_only_W[i]
-        if "sampled_gromov" in name_algo:
-            linestyle = "-"
-        elif "S_GWL" in name_algo:
-            linestyle = "--"
-        elif "sliced_gromov" in name_algo:
-            linestyle = "--"
-        elif "uniform" in name_algo:
-            linestyle = "dotted"
-        else:
-            linestyle = "--"
-        plt.figure(0, figsize=figsize)
-        plt.plot(n_samples_s[mask], np.mean(time_list, axis=1)[mask], linestyle=linestyle, label=name_algo_legend)
-        plt.fill_between(n_samples_s[mask],
-                         (np.mean(time_list, axis=1) - np.std(time_list, axis=1))[mask],
-                         (np.mean(time_list, axis=1) + np.std(time_list, axis=1))[mask],
-                         alpha=0.3)
-
-        plt.figure(1, figsize=figsize)
-        if name_algo == "uniform" or name_algo == "identity":
-            continue
-        # print(name_algo)
-        # for i in range(len(n_samples_s)):
-        #     print(n_samples_s[i])
-        #     print(np.mean(time_list_only_T, axis=1)[i], np.std(time_list_only_T, axis=1)[i])
-        plt.plot(n_samples_s[mask], np.mean(time_list_only_T, axis=1)[mask], linestyle=linestyle,
-                 label=name_algo_legend)
-        plt.fill_between(n_samples_s[mask],
-                         (np.mean(time_list_only_T, axis=1) - np.std(time_list_only_T, axis=1))[mask],
-                         (np.mean(time_list_only_T, axis=1) + np.std(time_list_only_T, axis=1))[mask],
-                         alpha=0.3)
-
-    plt.figure(0)
-    if log_scale:
-        plt.yscale("log")
-        plt.xscale("log")
-
-    plt.legend()
-    # plt.title("Time needed to compute T and Wasserstein")
-
-    plt.figure(1)
-    plt.legend()
-    # plt.title("Time needed to compute T")
-
-    if log_scale:
-        plt.yscale("log")
-        plt.xscale("log")
-    n_samples_s_temp = [0] * len(names_algo)
-
-    for a, name_algo in enumerate(names_algo):
-        W_distance_list = np.ones((len(n_samples_s), same_param["n_iter_algo"])) * 10e10
-        W_distance_list_approx = np.zeros((len(n_samples_s), same_param["n_iter_algo"]))
-        plt.figure(2, figsize=figsize)
-        # print("start with algo", a, name_algo)
-        # n_samples_s_temp[a] = n_samples_s.copy()
-        mask = np.ones(len(n_samples_s), dtype=bool)
-        for i in range(len(n_samples_s)):
-            acces_dict = name_algo + str(n_samples_s[i]) + "_" + str(n_samples_t[i])
-            if params[acces_dict] is None:
-                # n_samples_s_temp[a][i] = np.NaN
-                # print("continue", name_algo, i)
-                mask[i] = False
-                continue
-            if n_samples_s[i] > 1000:
-                mask[i] = False
-            if name_algo == "sliced_gromov":
-                W_distance_list_approx[i, :] = params[acces_dict]["W_distance_list_approx"] * 25
-            W_distance_list[i, :] = params[acces_dict]["W_distance_list"]
-
-        if "sampled_gromov" in name_algo:
-            linestyle = "-"
-        elif "S_GWL" in name_algo:
-            linestyle = "--"
-        elif "sliced_gromov" in name_algo:
-            linestyle = "--"
-        elif "uniform" in name_algo:
-            linestyle = "dotted"
-        else:
-            linestyle = "--"
-
-        if name_algo == "sliced_gromov":
-            plt.plot(n_samples_s[mask], np.mean(W_distance_list_approx, axis=1)[mask], linestyle=linestyle,
-                     label=names_algo_legend[a])
-            plt.fill_between(n_samples_s[mask],
-                             (np.mean(W_distance_list_approx, axis=1) - np.std(W_distance_list_approx, axis=1))[mask],
-                             (np.mean(W_distance_list_approx, axis=1) + np.std(W_distance_list_approx, axis=1))[mask],
-                             alpha=0.3)
-        else:
-            plt.plot(n_samples_s[mask], np.mean(W_distance_list[mask], axis=1), linestyle=linestyle,
-                     label=names_algo_legend[a])
-            plt.fill_between(n_samples_s[mask],
-                             (np.mean(W_distance_list, axis=1) - np.std(W_distance_list, axis=1))[mask],
-                             (np.mean(W_distance_list, axis=1) + np.std(W_distance_list, axis=1))[mask],
-                             alpha=0.3)
-    if log_scale:
-        plt.xscale("log")
-    plt.legend()
-    # plt.title("Wasserstein distance")
-
-    if name_dataset == "same_graph":
-        # n_samples_s_temp = [0] * len(names_algo)
-        diff_to_identity_list = np.ones((len(n_samples_s), same_param["n_iter_algo"])) * 10000
-        plt.figure(3, figsize=figsize)
-        for a, name_algo in enumerate(names_algo):
-            # n_samples_s_temp[a] = n_samples_s.copy()
-            mask = np.ones(len(n_samples_s), dtype=bool)
-            for i in range(len(n_samples_s)):
-                acces_dict = name_algo + str(n_samples_s[i]) + "_" + str(n_samples_t[i])
-                if params[acces_dict] is None:
-                    # n_samples_s_temp[a][i] = np.NaN
-                    mask[i] = False
-                    continue
-                diff_to_identity_list[i, :] = params[acces_dict]["diff_to_identity"]
-            if "sampled_gromov" in name_algo:
-                linestyle = "-"
-            elif "S_GWL" in name_algo:
-                linestyle = "--"
-            elif "sliced_gromov" in name_algo:
-                linestyle = "--"
-            elif "uniform" in name_algo:
-                linestyle = "dotted"
-            else:
-                linestyle = "--"
-
-            plt.plot(n_samples_s[mask], np.mean(diff_to_identity_list, axis=1)[mask], linestyle=linestyle,
-                     label=names_algo_legend[a])
-            plt.fill_between(n_samples_s[mask],
-                             (np.mean(diff_to_identity_list, axis=1) - np.std(diff_to_identity_list, axis=1))[mask],
-                             (np.mean(diff_to_identity_list, axis=1) + np.std(diff_to_identity_list, axis=1))[mask],
-                             alpha=0.3)
-
-        if log_scale:
-            plt.xscale("log")
-        plt.legend()
-        # plt.title("Wasserstein distance")
-
-    if save:
-        plt.figure(0)
-        plt.savefig("./figure/T_and_W_" + name_dataset + "_" + loss_func_name + ".pdf")
-        plt.figure(1)
-        plt.savefig("./figure/T_" + name_dataset + "_" + loss_func_name + ".pdf")
-        plt.figure(2)
-        plt.savefig("./figure/distance_" + name_dataset + "_" + loss_func_name + ".pdf")
-        if name_dataset == "same_graph":
-            plt.figure(3)
-            plt.savefig("./figure/diff_to_identity_" + name_dataset + "_" + loss_func_name + ".pdf")
-
-    # print(W_distance_list)
-    # best_w = np.min(W_distance_list, axis=(0, 2), keepdims=True)
-    # # print(best_w)
-    # # print(best_w.shape)
-    # # print(W_distance_list)
-    # W_distance_list = W_distance_list - best_w
-    # # print(W_distance_list)
-    # for a, name_algo in enumerate(names_algo):
-    #     if "sampled_gromov" in name_algo:
-    #         linestyle = "--"
-    #     else:
-    #         linestyle = "-"
-    #     plt.figure(3, figsize=figsize)
-    #
-    #     plt.plot(n_samples_s_temp[a], np.mean(W_distance_list[a], axis=1),
-    #              linestyle=linestyle, label=name_algo)
-    #     plt.fill_between(n_samples_s_temp[a],
-    #                      np.mean(W_distance_list[a], axis=1) - np.std(W_distance_list[a], axis=1),
-    #                      np.mean(W_distance_list[a], axis=1) + np.std(W_distance_list[a], axis=1),
-    #                      alpha=0.3)
-    #     plt.title("Approx Wasserstein distance")
-    #
-    #     plt.legend()
-    plt.show()
 
 
 def main(args):

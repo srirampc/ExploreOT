@@ -12,7 +12,7 @@ recursive graph matching ->
     first do graph partition recursively
     then calculate the Wasserstein barycenter of each sub-graph pair
 """
-import S_GWL as Gwl
+import sgwl
 import numpy as np
 from scipy.sparse import csr_matrix
 from typing import List, Dict, Tuple
@@ -221,7 +221,7 @@ def graph_partition(cost_s: csr_matrix, p_s: np.ndarray, p_t: np.ndarray,
     """
     cost_t = csr_matrix(np.diag(p_t[:, 0]))
     # cost_t = 1 / (1 + cost_t)
-    trans, d_gw, p_s = Gwl.gromov_wasserstein_discrepancy(cost_s, cost_t, p_s, p_t, ot_hyperpara, trans0)
+    trans, d_gw, p_s = sgwl.gromov_wasserstein_discrepancy(cost_s, cost_t, p_s, p_t, ot_hyperpara, trans0)
     sub_costs, sub_probs, sub_idx2nodes = node_cluster_assignment(cost_s, trans, p_s, p_t, idx2node)
     return sub_costs, sub_probs, sub_idx2nodes, trans
 
@@ -266,7 +266,7 @@ def recursive_graph_partition(cost_s: csr_matrix, p_s: np.ndarray, idx2node: Dic
             cost_t = csr_matrix(np.diag(p_t[:, 0]))
             # cost_t = 1 / (1 + cost_t)
             ot_hyperpara['outer_iteration'] = probs_all[i].shape[0]
-            trans, d_gw, p_s = Gwl.gromov_wasserstein_discrepancy(costs_all[i],
+            trans, d_gw, p_s = sgwl.gromov_wasserstein_discrepancy(costs_all[i],
                                                                   cost_t,
                                                                   probs_all[i],
                                                                   p_t,
@@ -345,7 +345,7 @@ def multi_graph_partition(costs: Dict, probs: Dict, p_t: np.ndarray,
                                                                                                  idx2nodes[n],
                                                                                                  ot_hyperpara)
     else:
-        cost_t, trans, _ = Gwl.gromov_wasserstein_barycenter(costs, probs, p_t, ot_hyperpara, weights)
+        cost_t, trans, _ = sgwl.gromov_wasserstein_barycenter(costs, probs, p_t, ot_hyperpara, weights)
         for n in costs.keys():
             sub_costs, sub_probs, sub_idx2nodes = node_cluster_assignment(costs[n],
                                                                           trans[n],
@@ -481,7 +481,7 @@ def direct_graph_matching(cost_s: csr_matrix, cost_t: csr_matrix, p_s: np.ndarra
         pairs_name: a list of node name pairs
         pairs_confidence: a list of confidence of node pairs
     """
-    trans, d_gw, p_s = Gwl.gromov_wasserstein_discrepancy(cost_s, cost_t, p_s, p_t, ot_hyperpara)
+    trans, d_gw, p_s = sgwl.gromov_wasserstein_discrepancy(cost_s, cost_t, p_s, p_t, ot_hyperpara)
     pairs_idx, pairs_name, pairs_confidence = node_pair_assignment(trans, p_s, p_t, idx2node_s, idx2node_t)
     return pairs_idx, pairs_name, pairs_confidence
 
@@ -507,7 +507,7 @@ def indrect_graph_matching(costs: Dict, probs: Dict, p_t: np.ndarray,
         set_name: a list of node name paired set
         set_confidence: a list of confidence set of node pairs
     """
-    cost_t, trans, _ = Gwl.gromov_wasserstein_barycenter(costs, probs, p_t, ot_hyperpara, weights)
+    cost_t, trans, _ = sgwl.gromov_wasserstein_barycenter(costs, probs, p_t, ot_hyperpara, weights)
     set_idx, set_name, set_confidence = node_set_assignment(trans, probs, idx2nodes)
     return set_idx, set_name, set_confidence
 
