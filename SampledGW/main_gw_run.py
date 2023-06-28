@@ -15,11 +15,11 @@ from sklearn.model_selection import train_test_split, KFold
 import sklearn.svm
 import pandas as pd
 
-from gwpl import Generalisation_OT
-from gwpl import entropic_gromov_wasserstein
-from gwpl import compute_distance
-from gwpl import compute_distance_sparse
-import gwpl as Gromov
+from gwot import Generalisation_OT
+from gwot import entropic_gromov_wasserstein
+from gwot import compute_distance
+from gwot import compute_distance_sparse
+import gwot as Gromov
 
 
 import sgwl_toolkit as gwgt
