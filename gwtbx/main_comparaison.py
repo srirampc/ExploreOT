@@ -15,18 +15,18 @@ import networkx as nx
 from sklearn.model_selection import train_test_split, KFold
 import sklearn.svm
 import pandas as pd
-
-from gwot import Generalisation_OT
-from gwot import entropic_gromov_wasserstein
-from gwot import compute_distance
-from gwot import compute_L
-from gwot import compute_distance_sparse
-import gwot as Gromov
-
-
-import sgwl_toolkit as gwgt
 import ot
-from slicedgw import sgw_cpu
+
+from .gwot import Generalisation_OT
+from .gwot import entropic_gromov_wasserstein
+from .gwot import compute_distance
+from .gwot import compute_L
+from .gwot import compute_distance_sparse
+from . import gwot as Gromov
+
+
+from . import sgwl_toolkit as gwgt
+from .slicedgw import sgw_cpu
 
 
 def get_C(Xs, Xt, function=False, dimension=1, enough_space=True, square_root=True, GPU=False):

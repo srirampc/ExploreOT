@@ -1,5 +1,5 @@
 import numpy as np
-from gw_interact_plot import analyse_data_hyper
+from .plots import analyse_data_hyper
 
 def plot_gw_runs(sampled_gromov_e_constant=True,
                  sampled_gromov_no_KL_e_constant=False,

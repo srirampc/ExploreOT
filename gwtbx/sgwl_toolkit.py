@@ -12,10 +12,10 @@ recursive graph matching ->
     first do graph partition recursively
     then calculate the Wasserstein barycenter of each sub-graph pair
 """
-import sgwl
 import numpy as np
 from scipy.sparse import csr_matrix
 from typing import List, Dict, Tuple
+from . import sgwl
 
 
 def estimate_target_distribution(probs: Dict, dim_t: int = 2) -> np.ndarray:
